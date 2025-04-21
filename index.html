@@ -667,6 +667,8 @@
             }
         }
     </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2196f3">
 </head>
 <body>
     <div class="overlay" id="overlay" onclick="closeAllSidebars()"></div>
@@ -1627,5 +1629,13 @@
             }
         }
     </script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function() {
+        console.log('Service Worker Registered');
+      });
+  }
+</script>
 </body>
 </html>
